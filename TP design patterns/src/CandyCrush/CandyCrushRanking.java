@@ -1,4 +1,5 @@
 package CandyCrush;
+
 import java.util.*;
 
 public class CandyCrushRanking {
