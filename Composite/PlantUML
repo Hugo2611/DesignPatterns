@@ -1,0 +1,25 @@
+@startuml
+abstract class AbstractFile {
+    +name: String
+    +size: int
+    +add(file: AbstractFile)
+    +remove(file: AbstractFile)
+    +getSize(): int
+    +display(indent: String)
+}
+
+class Directory extends AbstractFile {
+    +children: List<AbstractFile>
+    +add(file: AbstractFile)
+    +remove(file: AbstractFile)
+    +display(indent: String)
+}
+
+class File extends AbstractFile {
+    +display(indent: String)
+}
+
+AbstractFile <|-- Directory
+AbstractFile <|-- File
+Directory *-- AbstractFile
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+
+package CandyCrush {
+    class CandyCrushRanking {
+        - instance: CandyCrushRanking
+        - scores: TreeMap<Integer, Set<String>>
+        - playerScores: Map<String, Integer>
+        + getInstance(): CandyCrushRanking
+        + addScore(player: String, score: int): void
+        + removeScore(player: String): void
+        + getWinner(): String
+        + getLoser(): String
+        + getRanking(): Map<String, Integer>
+        + main(args: String[]): void
+    }
+}
+
+@enduml
